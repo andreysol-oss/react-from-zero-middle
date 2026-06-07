@@ -1,0 +1,22 @@
+const apiKey = '07862314-2ce9-4efe-a13a-1c4fb9570103'
+const headers = {
+    "api-key": apiKey
+}
+
+export const getTrack = (trackId: string) => {
+  return fetch(
+    "https://musicfun.it-incubator.app/api/1.0/playlists/tracks/" + trackId,
+    {
+      headers: headers
+    },
+  ).then((res) => res.json());
+};
+
+export const getTracks = () => {
+  return fetch(
+    "https://musicfun.it-incubator.app/api/1.0/playlists/tracks?pageSize=5",
+    {
+      headers: headers
+    },
+  ).then((res) => res.json());
+};
