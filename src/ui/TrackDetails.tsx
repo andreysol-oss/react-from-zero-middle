@@ -1,16 +1,14 @@
-import { useTrackDetails } from '../bll/useTrackDetails'
-import styles from './TrackDetails.module.css'
+import { useTrackDetails } from "../bll/useTrackDetails";
+import styles from "./TrackDetails.module.css";
 
 type Props = {
   selectedTrackId: string | null;
 };
 
-
-
 export function TrackDetails(props: Props) {
   console.log("TrackDetails");
 
-  const {selectedTrack} = useTrackDetails(props.selectedTrackId)
+  const { selectedTrack } = useTrackDetails(props.selectedTrackId);
 
   return (
     <div className={styles.track}>
