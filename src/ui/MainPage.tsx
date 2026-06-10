@@ -10,7 +10,7 @@ export function MainPage() {
 
   return (
     <div>
-      <PageTitle value={"Musicfun Player"} />
+      <PageTitle value={"Musicfun Player!"} />
       <Playlist
         selectedTrackId={selectedTrackId}
         onTrackSelect={handleTrackSelect}
